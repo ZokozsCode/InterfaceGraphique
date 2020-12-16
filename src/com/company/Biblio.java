@@ -27,7 +27,7 @@ public class Biblio extends JFrame {
         JMenu AboutJMenu = new JMenu();
         AboutJMenu.setText("A Propos");
         monMenuBarr.add(AboutJMenu);
-
+//menu deroulant 
         JMenuItem sous1 = new JMenuItem("Ouvrir");
         JMenuItem sous2 = new JMenuItem("Quitter");
         fileJMenu.add(sous1);
@@ -37,6 +37,10 @@ public class Biblio extends JFrame {
 
 
 
+
+
+
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);    // ferme le Jframe quand on met la croix rouge
     }
 
 
