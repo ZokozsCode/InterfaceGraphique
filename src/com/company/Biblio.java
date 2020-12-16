@@ -28,7 +28,10 @@ public class Biblio extends JFrame {
         AboutJMenu.setText("A Propos");
         monMenuBarr.add(AboutJMenu);
 
-
+        JMenuItem sous1 = new JMenuItem("Ouvrir");
+        JMenuItem sous2 = new JMenuItem("Quitter");
+        fileJMenu.add(sous1);
+        fileJMenu.add(sous2);
 
 
 
