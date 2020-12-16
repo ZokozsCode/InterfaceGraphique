@@ -12,9 +12,23 @@ public class Biblio extends JFrame {
          JPanel monPanel = new JPanel();
          this.setContentPane(monPanel);
          monPanel.setBackground(Color.LIGHT_GRAY);
-
          JMenuBar monMenuBarr = new JMenuBar();
          this.setJMenuBar(monMenuBarr);
+
+         //menu du Panel
+         JMenu fileJMenu = new JMenu();
+         fileJMenu.setText("Fichier");
+         monMenuBarr.add(fileJMenu);
+
+        JMenu EditJMenu = new JMenu();
+        EditJMenu.setText("Editer");
+        monMenuBarr.add(EditJMenu);
+
+        JMenu AboutJMenu = new JMenu();
+        AboutJMenu.setText("A Propos");
+        monMenuBarr.add(AboutJMenu);
+
+
 
 
 
