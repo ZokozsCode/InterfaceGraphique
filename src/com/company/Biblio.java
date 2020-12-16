@@ -15,6 +15,9 @@ public class Biblio extends JFrame {
          JMenuBar monMenuBarr = new JMenuBar();
          this.setJMenuBar(monMenuBarr);
 
+        GridBagLayout monLayout = new GridBagLayout();
+        monPanel.setLayout(monLayout);
+
          //menu du Panel
          JMenu fileJMenu = new JMenu();
          fileJMenu.setText("Fichier");
@@ -32,6 +35,10 @@ public class Biblio extends JFrame {
         JMenuItem sous2 = new JMenuItem("Quitter");
         fileJMenu.add(sous1);
         fileJMenu.add(sous2);
+
+
+        //Tableau
+        JTable monTable = new JTable();
 
 
 
