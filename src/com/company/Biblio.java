@@ -17,6 +17,7 @@ public class Biblio extends JFrame {
 
         GridBagLayout monLayout = new GridBagLayout();
         monPanel.setLayout(monLayout);
+        GridBagConstraints gbc = new GridBagConstraints();
 
          //menu du Panel
          JMenu fileJMenu = new JMenu();
@@ -30,15 +31,40 @@ public class Biblio extends JFrame {
         JMenu AboutJMenu = new JMenu();
         AboutJMenu.setText("A Propos");
         monMenuBarr.add(AboutJMenu);
-//menu deroulant 
+
+        //menu deroulant
         JMenuItem sous1 = new JMenuItem("Ouvrir");
         JMenuItem sous2 = new JMenuItem("Quitter");
         fileJMenu.add(sous1);
         fileJMenu.add(sous2);
 
-
         //Tableau
-        JTable monTable = new JTable();
+
+        String[] columnames = {"Name", "Auteurs", "Résumé", "Colonne", "Rangée", "Parution"};
+        Object[][] data ={
+                {"Harry Poter","J.K Rolling", "Sorcier","2","5", "2009"},
+                {"Eragon", "C.Paolini", "Monde de Dragon","2","2","2000"}
+        };
+        JTable monTable = new JTable(data,columnames);
+        gbc.gridx = 0;
+        gbc.gridy = 0;
+        gbc.gridwidth = 1;
+        gbc.gridheight = 1;
+
+        gbc.insets = new Insets(20, 0, 0, 0);
+        
+        monPanel.add(monTable.getTableHeader(), gbc);
+        gbc.gridx = 0;
+        gbc.gridy = 1;
+
+        monPanel.add(monTable, gbc);
+       // pack();
+
+
+
+
+
+
 
 
 
@@ -49,7 +75,6 @@ public class Biblio extends JFrame {
 
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);    // ferme le Jframe quand on met la croix rouge
     }
-
 
 
 }
