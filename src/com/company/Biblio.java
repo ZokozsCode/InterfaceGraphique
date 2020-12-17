@@ -35,6 +35,14 @@ public class Biblio extends JFrame {
              }
          });
          fileJMenu.add(sous4);
+         JMenuItem sous5 = new JMenuItem("Nouveautés");
+         sous5.addActionListener(new ActionListener() {
+             @Override
+             public void actionPerformed(ActionEvent e) {
+                 JOptionPane.showMessageDialog(fileJMenu, "Harry Potter de J.K Rolling - La Drague Pour les nul de Florence Escaravage - Culture Canabis de Verde Saggezza");
+             }
+         });
+         fileJMenu.add(sous5);
 
         JMenu EditJMenu = new JMenu();
         EditJMenu.setText("Editer");
