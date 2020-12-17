@@ -47,7 +47,14 @@ public class Biblio extends JFrame {
         String[] columnames = {"Name", "Auteurs", "Résumé", "Colonne", "Rangée", "Parution"};
         Object[][] data ={
                 {"Harry Poter","J.K Rolling", "Sorcier","2","5", "2009"},
-                {"Eragon", "C.Paolini", "Monde de Dragon","2","2","2000"}
+                {"Eragon", "C.Paolini", "Monde de Dragon","2","2","2000"},
+                {"XXX", "XXX", "XXX","XXX","XXX","XXX"},
+                {"XXX", "XXX", "XXX","XXX","XXX","XXX"},
+                {"XXX", "XXX", "XXX","XXX","XXX","XXX"},
+                {"XXX", "XXX", "XXX","XXX","XXX","XXX"},
+
+
+
         };
         JTable monTable = new JTable(data,columnames);
         gbc.gridx = 0;
@@ -68,11 +75,12 @@ public class Biblio extends JFrame {
         JTextField maTxtF = new JTextField();
         maTxtF.setPreferredSize(new Dimension(100,30));
         maTxtF.setText("Titre");
-        monPanel.add(maTxtF,gbc);
         gbc.gridx = 5;
-        gbc.gridy = 1;
+        gbc.gridy = 0;
         gbc.gridwidth = 1;
         gbc.gridheight = 1;
+        monPanel.add(maTxtF,gbc);
+
 
         JTextField Auteur = new JTextField();
         Auteur.setPreferredSize(new Dimension(100,30));
@@ -110,7 +118,7 @@ public class Biblio extends JFrame {
         gbc.gridheight = 1;
         monPanel.add(Rangee,gbc);
 
-        JTextArea Resume = new JTextArea();
+        JTextField Resume = new JTextField();
         Resume.setPreferredSize(new Dimension(100, 120));
         Resume.setText("Resumé");
         gbc.gridx = 5;
@@ -123,7 +131,7 @@ public class Biblio extends JFrame {
         JButton myButton = new JButton();
         myButton.setText("Valider");
         gbc.gridx = 5;
-        gbc.gridy = 5;
+        gbc.gridy = 6;
         gbc.gridwidth = 1;
         gbc.gridheight = 1;
         monPanel.add(myButton,gbc);
@@ -154,15 +162,48 @@ public class Biblio extends JFrame {
             }
         });
 
+//modifier le titre
+    maTxtF.addActionListener(new ActionListener() {
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            monTable.setValueAt(maTxtF.getText(),0,0);
+        }
+         });
+//modifier l'auteur
+        Auteur.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                monTable.setValueAt(Auteur.getText(),0,1);
+            }
+        });
+// modifier date de sortie
+        Parution.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                monTable.setValueAt(Parution.getText(),0,5);
+            }
+        });
 
+        Colonne.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                monTable.setValueAt(Colonne.getText(),0,3);
+            }
+        });
 
+        Rangee.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                monTable.setValueAt(Rangee.getText(),0,4);
+            }
+        });
 
-
-
-
-
-
-
+        Resume.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                monTable.setValueAt(Resume.getText(),0,2);
+            }
+        });
 
 
 
