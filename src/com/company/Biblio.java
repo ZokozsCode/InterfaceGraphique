@@ -162,6 +162,11 @@ public class Biblio extends JFrame {
             }
         });
 
+
+
+
+
+
 //modifier le titre
     maTxtF.addActionListener(new ActionListener() {
         @Override
@@ -204,6 +209,21 @@ public class Biblio extends JFrame {
                 monTable.setValueAt(Resume.getText(),0,2);
             }
         });
+
+
+        myButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                monTable.setValueAt(Resume.getText("") + Rangee.getText() + Colonne.getText() + Parution.getText() + Auteur.getText());
+
+
+            }
+        });
+
+
+
+
+
 
 
 
