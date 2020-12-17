@@ -35,6 +35,15 @@ public class Biblio extends JFrame {
         JMenu AboutJMenu = new JMenu();
         AboutJMenu.setText("A Propos");
         monMenuBarr.add(AboutJMenu);
+        JMenuItem sous3 = new JMenuItem("About");
+        sous3.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                JOptionPane.showMessageDialog(AboutJMenu, "Dév: Angel - Alexis - Merwan la pute");
+            }
+        });
+        AboutJMenu.add(sous3);
+
 
         //menu deroulant
         JMenuItem sous1 = new JMenuItem("Ouvrir");
@@ -211,14 +220,14 @@ public class Biblio extends JFrame {
         });
 
 
-        myButton.addActionListener(new ActionListener() {
+        /*myButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 monTable.setValueAt(Resume.getText("") + Rangee.getText() + Colonne.getText() + Parution.getText() + Auteur.getText());
 
 
             }
-        });
+        });*/
 
 
 
