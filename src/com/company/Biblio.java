@@ -52,7 +52,7 @@ public class Biblio extends JFrame {
         gbc.gridheight = 1;
 
         gbc.insets = new Insets(20, 0, 0, 0);
-        
+
         monPanel.add(monTable.getTableHeader(), gbc);
         gbc.gridx = 0;
         gbc.gridy = 1;
