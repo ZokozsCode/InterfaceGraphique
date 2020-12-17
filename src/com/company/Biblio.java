@@ -83,63 +83,82 @@ public class Biblio extends JFrame {
         //Formulaire
         JTextField maTxtF = new JTextField();
         maTxtF.setPreferredSize(new Dimension(100,30));
-        maTxtF.setText("Titre");
-        gbc.gridx = 5;
+        gbc.gridx = 7;
         gbc.gridy = 0;
         gbc.gridwidth = 1;
         gbc.gridheight = 1;
         monPanel.add(maTxtF,gbc);
+        JLabel monTitre = new JLabel("Titre : ");
+        gbc.gridx= 6;
+        gbc.gridy=0;
+        monPanel.add(monTitre,gbc);
 
 
         JTextField Auteur = new JTextField();
         Auteur.setPreferredSize(new Dimension(100,30));
-        Auteur.setText("Auteur");
-        gbc.gridx = 5;
+        gbc.gridx = 7;
         gbc.gridy = 1;
         gbc.gridwidth = 1;
         gbc.gridheight = 1;
         monPanel.add(Auteur,gbc);
+        JLabel monAuteur = new JLabel("Auteur : ");
+        gbc.gridx= 6;
+        gbc.gridy=1;
+        monPanel.add(monAuteur,gbc);
 
         JTextField Parution = new JTextField();
         Parution.setPreferredSize(new Dimension(100,30));
-        Parution.setText("Parution");
-        gbc.gridx = 5;
+        gbc.gridx = 7;
         gbc.gridy = 2;
         gbc.gridwidth = 1;
         gbc.gridheight = 1;
         monPanel.add(Parution,gbc);
+        JLabel maParution = new JLabel("Parution : ");
+        gbc.gridx= 6;
+        gbc.gridy= 2;
+        monPanel.add(maParution,gbc);
+
 
         JTextField Colonne = new JTextField();
         Colonne.setPreferredSize(new Dimension(100,30));
-        Colonne.setText("Colonne");
-        gbc.gridx = 5;
+        gbc.gridx = 7;
         gbc.gridy = 3;
         gbc.gridwidth = 1;
         gbc.gridheight = 1;
         monPanel.add(Colonne,gbc);
+        JLabel maColonne = new JLabel("Colonne : : ");
+        gbc.gridx= 6;
+        gbc.gridy= 3;
+        monPanel.add(maColonne,gbc);
 
         JTextField Rangee = new JTextField();
         Rangee.setPreferredSize(new Dimension(100,30));
-        Rangee.setText("Rangée");
-        gbc.gridx = 5;
+        gbc.gridx = 7;
         gbc.gridy = 4;
         gbc.gridwidth = 1;
         gbc.gridheight = 1;
         monPanel.add(Rangee,gbc);
+        JLabel maRangee = new JLabel("Rangée  : ");
+        gbc.gridx= 6;
+        gbc.gridy= 4;
+        monPanel.add(maRangee,gbc);
 
         JTextField Resume = new JTextField();
         Resume.setPreferredSize(new Dimension(100, 120));
-        Resume.setText("Resumé");
-        gbc.gridx = 5;
+        gbc.gridx = 7;
         gbc.gridy = 5;
         gbc.gridwidth = 1;
         gbc.gridheight = 1;
         monPanel.add(Resume,gbc);
+        JLabel monResume = new JLabel("Resumé : ");
+        gbc.gridx= 6;
+        gbc.gridy= 5;
+        monPanel.add(monResume,gbc);
 
         //Bouton
         JButton myButton = new JButton();
         myButton.setText("Valider");
-        gbc.gridx = 5;
+        gbc.gridx = 7;
         gbc.gridy = 6;
         gbc.gridwidth = 1;
         gbc.gridheight = 1;

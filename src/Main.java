@@ -1,4 +1,4 @@
-import com.company.Biblio;
+import com.company.*;
 
 public class Main {
 
@@ -6,6 +6,8 @@ public class Main {
 	// write your code here
         Biblio maBiblio = new Biblio();
         maBiblio.setVisible(true);
+
+        //Book monBook = new Book("le titre", "l'auteur","le resumer",5,3,2000);
 
 
 
