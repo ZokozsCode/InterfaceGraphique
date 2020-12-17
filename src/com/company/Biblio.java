@@ -210,24 +210,6 @@ public class Biblio extends JFrame {
 
 
 
-
-
-
-//modifier le titre
-    maTxtF.addActionListener(new ActionListener() {
-        @Override
-        public void actionPerformed(ActionEvent e) {
-            monTable.setValueAt(maTxtF.getText(),0,0);
-        }
-         });
-//modifier l'auteur
-        Auteur.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                monTable.setValueAt(Auteur.getText(),0,1);
-            }
-        });
-
         // modifier date de sortie
 
         myButton.addActionListener(new ActionListener() {
