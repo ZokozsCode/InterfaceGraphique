@@ -126,7 +126,7 @@ public class Biblio extends JFrame {
         gbc.gridwidth = 1;
         gbc.gridheight = 1;
         monPanel.add(Colonne,gbc);
-        JLabel maColonne = new JLabel("Colonne : : ");
+        JLabel maColonne = new JLabel("Colonne : ");
         gbc.gridx= 6;
         gbc.gridy= 3;
         monPanel.add(maColonne,gbc);
