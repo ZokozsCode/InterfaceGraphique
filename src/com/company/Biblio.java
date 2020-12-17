@@ -27,6 +27,14 @@ public class Biblio extends JFrame {
          JMenu fileJMenu = new JMenu();
          fileJMenu.setText("Fichier");
          monMenuBarr.add(fileJMenu);
+         JMenuItem sous4 = new JMenuItem("Stat");
+         sous4.addActionListener(new ActionListener() {
+             @Override
+             public void actionPerformed(ActionEvent e) {
+                 JOptionPane.showMessageDialog(fileJMenu,"Livres: Harry Potter");
+             }
+         });
+         fileJMenu.add(sous4);
 
         JMenu EditJMenu = new JMenu();
         EditJMenu.setText("Editer");
@@ -237,22 +245,6 @@ public class Biblio extends JFrame {
                 monTable.setValueAt(Resume.getText(),0,2);
             }
         });
-
-
-        /*myButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                monTable.setValueAt(Resume.getText("") + Rangee.getText() + Colonne.getText() + Parution.getText() + Auteur.getText());
-
-
-            }
-        });*/
-
-
-
-
-
-
 
 
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);    // ferme le Jframe quand on met la croix rouge
