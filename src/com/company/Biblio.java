@@ -2,6 +2,10 @@ package com.company;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.io.File;
+import java.io.IOException;
 
 public class Biblio extends JFrame {
 
@@ -59,6 +63,30 @@ public class Biblio extends JFrame {
 
         monPanel.add(monTable, gbc);
        // pack();
+
+        //mon chooser sur le "ouvrir"
+        sous1.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                JFileChooser monChooser = new JFileChooser();
+                monChooser.setAcceptAllFileFilterUsed(false);
+                int dialog = monChooser.showDialog(monPanel,"Open"); //case a droite pour ouvrir le dossier
+                if (dialog == JFileChooser.APPROVE_OPTION) {
+                    File file = monChooser.getSelectedFile(); //permet des opérations sur les fichiers et les répertoires du système de fichiers
+                    Desktop desktop = Desktop.getDesktop(); // sert pour les utilisateur pour les Sout e endessous
+                    if (file.exists()) {
+                        try {  //essayé
+                            desktop.open(file.getAbsoluteFile());
+                            System.out.println(file.getName() + " a été ouvert");
+                        } catch (IOException ioException) {  //capture
+                            ioException.printStackTrace();
+                        }
+                    }
+                } else {
+                    System.out.println("Annulations");
+                }
+            }
+        });
 
 
 
