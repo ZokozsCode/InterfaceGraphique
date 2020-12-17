@@ -69,21 +69,22 @@ public class Biblio extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 JFileChooser monChooser = new JFileChooser();
-                monChooser.setAcceptAllFileFilterUsed(false);
+               // monChooser.setAcceptAllFileFilterUsed(false);
                 int dialog = monChooser.showDialog(monPanel,"Open"); //case a droite pour ouvrir le dossier
                 if (dialog == JFileChooser.APPROVE_OPTION) {
                     File file = monChooser.getSelectedFile(); //permet des opérations sur les fichiers et les répertoires du système de fichiers
                     Desktop desktop = Desktop.getDesktop(); // sert pour les utilisateur pour les Sout e endessous
                     if (file.exists()) {
                         try {  //essayé
-                            desktop.open(file.getAbsoluteFile());
+                            desktop.open(file.getAbsoluteFile());  // le chemin du fichier
                             System.out.println(file.getName() + " a été ouvert");
-                        } catch (IOException ioException) {  //capture
-                            ioException.printStackTrace();
+                            System.out.println("Le chemin du fichier est : " + file.getAbsolutePath()); // SOUT + le fichier
+                        } catch (IOException ioException) { // (capture ) génere une exeption
+                            ioException.printStackTrace(); //imprime la trace de pile de l'instance
                         }
                     }
                 } else {
-                    System.out.println("Annulations");
+                    System.out.println("Action Ouvrir Annulé");
                 }
             }
         });
