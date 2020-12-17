@@ -65,9 +65,9 @@ public class Biblio extends JFrame {
         Object[][] data ={
                 {"Harry Poter","J.K Rolling", "Sorcier","2","5", "2009"},
                 {"Eragon", "C.Paolini", "Monde de Dragon","2","2","2000"},
-                {"XXX", "XXX", "XXX","XXX","XXX","XXX"},
-                {"XXX", "XXX", "XXX","XXX","XXX","XXX"},
-                {"XXX", "XXX", "XXX","XXX","XXX","XXX"},
+                {"XXX", "XXX", "XXX","1","4","XXX"},
+                {"XXX", "XXX", "XXX","7","3","XXX"},
+                {"XXX", "XXX", "XXX","5","2","XXX"},
                 {"XXX", "XXX", "XXX","XXX","XXX","XXX"},
 
 
@@ -173,6 +173,16 @@ public class Biblio extends JFrame {
         monPanel.add(myButton,gbc);
 
 
+        //Bouton ajouter
+        JButton myButton2 = new JButton();
+        myButton2.setText("Ajouter");
+        gbc.gridx = 0;
+        gbc.gridy = 2;
+        gbc.gridwidth = 1;
+        gbc.gridheight = 1;
+        monPanel.add(myButton2,gbc);
+
+
         //mon chooser sur le "ouvrir"
         sous1.addActionListener(new ActionListener() {
             @Override
@@ -243,6 +253,21 @@ public class Biblio extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 monTable.setValueAt(Resume.getText(),0,2);
+            }
+        });
+
+
+//ajout de livre dans la bibi
+
+        myButton2.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                monTable.setValueAt(Resume.getText(),5,2);
+                monTable.setValueAt(Rangee.getText(),5,4);
+                monTable.setValueAt(Colonne.getText(),5,3);
+                monTable.setValueAt(Parution.getText(),5,5);
+                monTable.setValueAt(Auteur.getText(),5,1);
+                monTable.setValueAt(maTxtF.getText(),5,0);
             }
         });
 
