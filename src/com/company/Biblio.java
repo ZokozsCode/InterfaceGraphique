@@ -31,7 +31,7 @@ public class Biblio extends JFrame {
          sous4.addActionListener(new ActionListener() {
              @Override
              public void actionPerformed(ActionEvent e) {
-                 JOptionPane.showMessageDialog(fileJMenu,"Livres: Harry Potter");
+                 JOptionPane.showMessageDialog(fileJMenu,"Livres: Harry Potter - La drague pour les nuls");
              }
          });
          fileJMenu.add(sous4);
@@ -245,6 +245,18 @@ public class Biblio extends JFrame {
                 monTable.setValueAt(maTxtF.getText(),5,0);
             }
         });
+
+ //quit la fenetre quand on met quitter 
+        sous2.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                System.exit(0);
+            }
+        });
+
+
+
+
 
 
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);    // ferme le Jframe quand on met la croix rouge
