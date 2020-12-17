@@ -55,7 +55,7 @@ public class Biblio extends JFrame {
         sous3.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                JOptionPane.showMessageDialog(AboutJMenu, "Dév: Angel - Alexis - Merwan la pute");
+                JOptionPane.showMessageDialog(AboutJMenu, "Dév: Angel - Alexis - Merwan");
             }
         });
         AboutJMenu.add(sous3);
@@ -73,9 +73,9 @@ public class Biblio extends JFrame {
         Object[][] data ={
                 {"Harry Poter","J.K Rolling", "Sorcier","2","5", "2009"},
                 {"Eragon", "C.Paolini", "Monde de Dragon","2","2","2000"},
-                {"XXX", "XXX", "XXX","1","4","XXX"},
-                {"XXX", "XXX", "XXX","7","3","XXX"},
-                {"XXX", "XXX", "XXX","5","2","XXX"},
+                {"La drague pour les nuls", "Florence Escaravage", "Tu veux pecho ?","1","4"," 2012"},
+                {"Les miserables", "Victor Hugo", "La story de Jean Valjean et Cosette","7","3","1862"},
+                {"Culture Canabis ", "Verde saggezza", "Comment avoir la main verte ","5","2","2019"},
                 {"XXX", "XXX", "XXX","XXX","XXX","XXX"},
 
 
@@ -87,7 +87,7 @@ public class Biblio extends JFrame {
         gbc.gridwidth = 1;
         gbc.gridheight = 1;
 
-        gbc.insets = new Insets(20, 0, 0, 0);
+        gbc.insets = new Insets(0, 0, 7, 0);
 
         monPanel.add(monTable.getTableHeader(), gbc);
         gbc.gridx = 0;
