@@ -11,7 +11,7 @@ public class Biblio extends JFrame {
 
     public Biblio(){
          super("Bibliotheque");
-         setSize(500,500);
+         setSize(800,700);
 
          JPanel monPanel = new JPanel();
          this.setContentPane(monPanel);
@@ -63,6 +63,71 @@ public class Biblio extends JFrame {
 
         monPanel.add(monTable, gbc);
        // pack();
+
+        //Formulaire
+        JTextField maTxtF = new JTextField();
+        maTxtF.setPreferredSize(new Dimension(100,30));
+        maTxtF.setText("Titre");
+        monPanel.add(maTxtF,gbc);
+        gbc.gridx = 5;
+        gbc.gridy = 1;
+        gbc.gridwidth = 1;
+        gbc.gridheight = 1;
+
+        JTextField Auteur = new JTextField();
+        Auteur.setPreferredSize(new Dimension(100,30));
+        Auteur.setText("Auteur");
+        gbc.gridx = 5;
+        gbc.gridy = 1;
+        gbc.gridwidth = 1;
+        gbc.gridheight = 1;
+        monPanel.add(Auteur,gbc);
+
+        JTextField Parution = new JTextField();
+        Parution.setPreferredSize(new Dimension(100,30));
+        Parution.setText("Parution");
+        gbc.gridx = 5;
+        gbc.gridy = 2;
+        gbc.gridwidth = 1;
+        gbc.gridheight = 1;
+        monPanel.add(Parution,gbc);
+
+        JTextField Colonne = new JTextField();
+        Colonne.setPreferredSize(new Dimension(100,30));
+        Colonne.setText("Colonne");
+        gbc.gridx = 5;
+        gbc.gridy = 3;
+        gbc.gridwidth = 1;
+        gbc.gridheight = 1;
+        monPanel.add(Colonne,gbc);
+
+        JTextField Rangee = new JTextField();
+        Rangee.setPreferredSize(new Dimension(100,30));
+        Rangee.setText("Rangée");
+        gbc.gridx = 5;
+        gbc.gridy = 4;
+        gbc.gridwidth = 1;
+        gbc.gridheight = 1;
+        monPanel.add(Rangee,gbc);
+
+        JTextArea Resume = new JTextArea();
+        Resume.setPreferredSize(new Dimension(100, 120));
+        Resume.setText("Resumé");
+        gbc.gridx = 5;
+        gbc.gridy = 5;
+        gbc.gridwidth = 1;
+        gbc.gridheight = 1;
+        monPanel.add(Resume,gbc);
+
+        //Bouton
+        JButton myButton = new JButton();
+        myButton.setText("Valider");
+        gbc.gridx = 5;
+        gbc.gridy = 5;
+        gbc.gridwidth = 1;
+        gbc.gridheight = 1;
+        monPanel.add(myButton,gbc);
+
 
         //mon chooser sur le "ouvrir"
         sous1.addActionListener(new ActionListener() {
