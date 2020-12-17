@@ -227,35 +227,20 @@ public class Biblio extends JFrame {
                 monTable.setValueAt(Auteur.getText(),0,1);
             }
         });
-// modifier date de sortie
-        Parution.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                monTable.setValueAt(Parution.getText(),0,5);
-            }
-        });
 
-        Colonne.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                monTable.setValueAt(Colonne.getText(),0,3);
-            }
-        });
+        // modifier date de sortie
 
-        Rangee.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                monTable.setValueAt(Rangee.getText(),0,4);
-            }
-        });
-
-        Resume.addActionListener(new ActionListener() {
+        myButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 monTable.setValueAt(Resume.getText(),0,2);
+                monTable.setValueAt(Rangee.getText(),0,4);
+                monTable.setValueAt(Colonne.getText(),0,3);
+                monTable.setValueAt(Parution.getText(),0,5);
+                monTable.setValueAt(Auteur.getText(),0,1);
+                monTable.setValueAt(maTxtF.getText(),0,0);
             }
         });
-
 
 //ajout de livre dans la bibi
 
