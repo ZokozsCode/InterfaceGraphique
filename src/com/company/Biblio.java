@@ -39,7 +39,7 @@ public class Biblio extends JFrame {
          sous5.addActionListener(new ActionListener() {
              @Override
              public void actionPerformed(ActionEvent e) {
-                 JOptionPane.showMessageDialog(fileJMenu, "Harry Potter de J.K Rolling - La Drague Pour les nul de Florence Escaravage - Culture Canabis de Verde Saggezza");
+                 JOptionPane.showMessageDialog(fileJMenu, "- Harry Potter de J.K Rolling \n - La Drague Pour les nuls de Florence Escaravage \n - Culture Canabis de Verde Saggezza");
              }
          });
          fileJMenu.add(sous5);
@@ -55,7 +55,7 @@ public class Biblio extends JFrame {
         sous3.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                JOptionPane.showMessageDialog(AboutJMenu, "Dév: Angel - Alexis - Merwan");
+                JOptionPane.showMessageDialog(AboutJMenu,  "Dév:Angel \n       Alexis \n       Merwan");
             }
         });
         AboutJMenu.add(sous3);
