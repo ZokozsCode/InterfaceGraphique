@@ -47,7 +47,9 @@ public class Biblio extends JFrame {
         JMenu EditJMenu = new JMenu();
         EditJMenu.setText("Editer");
         monMenuBarr.add(EditJMenu);
-
+        JMenuItem Raz = new JMenuItem("Raz");
+        EditJMenu.add(Raz);
+        
         JMenu AboutJMenu = new JMenu();
         AboutJMenu.setText("A Propos");
         monMenuBarr.add(AboutJMenu);
