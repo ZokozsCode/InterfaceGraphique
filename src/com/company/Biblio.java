@@ -191,6 +191,14 @@ public class Biblio extends JFrame {
         monPanel.add(myButton2,gbc);
 
 
+
+
+
+
+
+
+
+
         //mon chooser sur le "ouvrir"
         sous1.addActionListener(new ActionListener() {
             @Override
@@ -216,9 +224,11 @@ public class Biblio extends JFrame {
             }
         });
 
+        
 
+         monTable.setGridColor(Color.GRAY);// délimite les tableau
 
-        // modifier date de sortie
+         // modifier date de sortie
 
         myButton.addActionListener(new ActionListener() {
             @Override
@@ -229,6 +239,7 @@ public class Biblio extends JFrame {
                 monTable.setValueAt(Parution.getText(),0,5);
                 monTable.setValueAt(Auteur.getText(),0,1);
                 monTable.setValueAt(maTxtF.getText(),0,0);
+
             }
         });
 
