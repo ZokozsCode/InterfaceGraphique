@@ -31,7 +31,7 @@ public class Biblio extends JFrame {
          sous4.addActionListener(new ActionListener() {
              @Override
              public void actionPerformed(ActionEvent e) {
-                 JOptionPane.showMessageDialog(fileJMenu,"Livres: Harry Potter - La drague pour les nuls");
+                 JOptionPane.showMessageDialog(fileJMenu,"Livres:  Harry Potter - La drague pour les nuls");
              }
          });
          fileJMenu.add(sous4);
@@ -55,7 +55,7 @@ public class Biblio extends JFrame {
         sous3.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                JOptionPane.showMessageDialog(AboutJMenu,  "Dév:Angel \n       Alexis \n       Merwan");
+                JOptionPane.showMessageDialog(AboutJMenu,  "Dév: Angel \n        Alexis \n        Merwan \n Version: Java 15");
             }
         });
         AboutJMenu.add(sous3);
